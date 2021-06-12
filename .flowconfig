@@ -42,6 +42,13 @@ suppress_type=$FlowFixMe
 suppress_type=$FlowFixMeProps
 suppress_type=$FlowFixMeState
 
+# Alias the package name
+module.name_mapper='^react-native$' -> 'react-native-web'
+
+# Point flow to the 'module' field by default
+module.system.node.main_field=module
+module.system.node.main_field=main
+
 [lints]
 sketchy-null-number=warn
 sketchy-null-mixed=warn
